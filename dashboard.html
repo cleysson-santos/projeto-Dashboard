@@ -3,78 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
     <title>Dashboard</title>
 </head>
 <body>
-    <header>
-        <a href="#">
-            <img src="./avg/profile.svg" alt="">
-            Profile
-        </a>
-        
-        <a href="#">
-            <img src="./avg/settings.svg" alt="">
-            Setting
-        </a>
+    <nav class="mainNav">
+        <a href="dashboard.html" class="mainNav-linkLogo">Dashboard</a>
 
-        <p>Cleysson Santos</p>
-        <p>Front-end</p>
-    </header>
+        <div class="menus">
+            <ul class="menu">
+                <li>
+                    <a href="#">
+                        <img src="./avg/dashboard.svg" alt="">
+                    Dashboard
+                    </a>
+                </li>
 
-    <nav>
-        <a href="dashboard.html">dashboard</a>
+                <li>
+                    <a href="#">
+                        <img src="./avg/announced.svg" alt="">
+                    Announced
+                    </a>
+                </li>
 
+                <li>
+                    <a href="#">
+                        <img src="./avg/preparation.svg" alt="">
+                    Preparation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="./avg/sorted.svg" alt="">
+                    Sorted
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="./avg/distributed.svg" alt="">
+                    Distributed
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="menu">
+                <li>
+                    <a href="#">
+                        <img src="./avg/logout.svg" alt="">
+                    Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
         
-        <a href="dashboard.html">
-            <img src="./avg/dashboard.svg" alt="">
-            Dashboard
-        </a>
-        
-        <a href="#">
-            <img src="./avg/announced.svg" alt="">
-            Announced
-        </a>
-        
-        <a href="#">
-            <img src="./avg/preparation.svg" alt="">
-            Preparation
-        </a>
-        
-        <a href="#">
-            <img src="./avg/sorted.svg" alt="">
-            Sorted
-        </a>
-        
-        <a href="#">
-            <img src="./avg/distributed.svg" alt="">
-            Distributed
-        </a>
-        
-        <p>
-            <img src="./avg/logout.svg" alt="">
-            Logout
-        </p>
     </nav>
+    
+    <header class="topNav">
+        <nav>
+            <ul class="topNav_menu">
+                <li>
+                    <a href="#">
+                        <img src="./avg/profile.svg" alt="">
+                    Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./avg/settings.svg" alt="">
+                    Setting
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="perfil">
+            <div class="perfil_thumb">
+                <img src="imagens/perfil.png" alt="">
+            </div>
+            <div>Cleysson Santos</div>
+            <div>Front-end</div>
+        </section>
+    </header>
         
     <main>
-        <section>
-            <h5>Announced Today</h5>
-            <p>235600</p> 
+        <section class="summary">
+            <article>
+                <span class="description">Announced Today</span>
+                <span class="number">235600</span>
+            </article>
+            
+            <article>
+                <span class="description">Prepared Today</span>
+                <span class="number">16738</span>
+            </article>
 
-            <h5>Prepared Today</h5>
-            <p>16738</p>
+            <article>
+                <span class="description">Sorted Today</span>
+                <span class="number">286</span>
+            </article>
 
-            <h5>Sorted Today</h5>
-            <p>286</p>
-
-            <a href="#">See more</a>
+            <a href="#" class="btn">See more</a>
         </section>
 
         <figure>
-            <img src="./imagens/chart1.png" alt="">
-            <img src="./imagens/chart2.png" alt="">
-            <img src="./imagens/chart3.png" alt="">
+            <img src="./imagens/chart1.png" alt="chart 1">
+            <img src="./imagens/chart2.png" alt="chart 2">
+            <img src="./imagens/chart3.png" alt="chart 3">
         </figure>
     </main>
 </body>
