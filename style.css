@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #004EDA;
+    --background-color-main: #F2F2F8;
+    --default-padding: 2rem;
+    --black: #111;
+    --color-text: #5a5a5f;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 64px auto;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mainNav {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.topNav {
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+}
+
+main {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+    background-color: var(--background-color-main);
+}
+
+.mainNav_linkLogo {
+    padding-left: var(--default-padding);
+    padding-top: var(--default-padding);
+
+    display: inline-block;
+
+    color: var(--black);
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mainNav_menu, 
+.topNav_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: var(--default-padding);
+}
+
+.mainNav_menu a, 
+.topNav_menu a{
+    text-decoration: none;
+    color: #5a5a5f;
+}
+
+.mainNav_menu img, 
+.topNav_menu img {
+    vertical-align: bottom;
+}
+
+.topNav_menu {
+    display: flex;
+    gap: var(--default-padding);
+}
+
+.mainNav_menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    padding-top: var(--default-padding);
+}
+
+.mainNav_menu:last-child {
+    padding-bottom: var(--default-padding);
+}
+
+.perfil {
+    margin-right: var(--default-padding);
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+}
+
+.perfil_thumb {
+    height: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-right: calc(var(--default-padding) / 2);
+    box-sizing: border-box;
+}
+
+.perfil_thumb img {
+    height: 100%;
+}
+
+.perfil_name {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.perfil_rule {
+    font-size: .7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: color-mix(in srg, var(--black), transparent 60%);
+}
