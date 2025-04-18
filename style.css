@@ -2,6 +2,7 @@
     --primary-color: #004EDA;
     --background-color-main: #F2F2F8;
     --default-padding: 2rem;
+    --middle-padding: calc(var(--default-padding) / 2);
     --black: #111;
     --color-text: #5a5a5f;
 }
@@ -11,8 +12,8 @@ body {
     color: var(--color-text);
 
     display: grid;
-    grid-template-columns: 240px 1fr;
-    grid-template-rows: 64px auto;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 4rem minmax(calc(100vh - 4rem), auto);
     margin: 0;
 }
 
@@ -26,7 +27,12 @@ img {
 
     display: flex;
     flex-direction: column;
+
     background-color: white;
+    max-height: 100dvh;
+
+    position: sticky;
+    top: 0;
 }
 
 .topNav {
@@ -75,6 +81,11 @@ main > figure {
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
+    padding-right: var(--default-padding);
+}
+
+.mainNav_menu {
+    padding-right: var(--default-padding);
 }
 
 .mainNav_menu, 
@@ -110,7 +121,16 @@ main > figure {
     padding-top: var(--default-padding);
 }
 
+.mainNav_menu li {
+    margin-top: 1rem;
+}
+
 .mainNav_menu:last-child {
+    padding-bottom: var(--default-padding);
+}
+
+.mainNav_menu:not(:last-child) {
+    border-bottom: 1px solid var(--background-color-main);
     padding-bottom: var(--default-padding);
 }
 
@@ -126,7 +146,7 @@ main > figure {
     height: 100%;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    margin-right: calc(var(--default-padding) / 2);
+    margin-right: var(--middle-padding);
     box-sizing: border-box;
 }
 
@@ -150,7 +170,7 @@ main > figure {
 .summary {
     background-color: white;
     border-radius: 4px;
-    padding: calc(var(--default-padding) / 2) var(--default-padding);
+    padding: var(--middle-padding) var(--default-padding);
 
     display: flex;
     justify-content: space-between;
@@ -158,27 +178,27 @@ main > figure {
 }
 
 .summary article {
-    padding: calc(var(--default-padding) / 2) 0;
+    padding: var(--middle-padding) 0;
 }
 
-.separated {
+.summary_separated {
     width: 2px;
     background-color: var(--background-color-main);
-    align-items: stretch;
+    align-self: stretch;
 }
 
-.description {
+.summary_description {
     color: var(--color-text);
     font-weight: 500;
     line-height: 27px;
     letter-spacing: 0.32px;
 }
 
-.summary .number {
+.summary_number {
     color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 600;
-    margin-left: calc(var(--default-padding) / 2);
+    margin-left: var(--middle-padding);
 }
 
 .btn {
@@ -186,11 +206,12 @@ main > figure {
     color: #FFF;
     font-weight: 500;
     text-decoration: none;
-    padding: 16px 24px;
+    padding: calc(var(--middle-padding) / 2) var(--default-padding);
     border-radius: 4px;
-    
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 10px;
+}
 
+.summary_btn {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
 }
