@@ -44,6 +44,25 @@ main {
     grid-row: 2 / -1;
     grid-column: 2 / -1;
     background-color: var(--background-color-main);
+
+    display: grid;
+    gap: var(--default-padding);
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+
+    padding: var(--default-padding);
+}
+
+main > * {
+    grid-column: span 2;
+}
+
+main > .grid-half {
+    grid-column: span 1;
+}
+
+main > figure {
+    margin: 0;
 }
 
 .mainNav_linkLogo {
@@ -126,4 +145,52 @@ main {
     font-weight: 500;
     text-transform: uppercase;
     color: color-mix(in srg, var(--black), transparent 60%);
+}
+
+.summary {
+    background-color: white;
+    border-radius: 4px;
+    padding: calc(var(--default-padding) / 2) var(--default-padding);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary article {
+    padding: calc(var(--default-padding) / 2) 0;
+}
+
+.separated {
+    width: 2px;
+    background-color: var(--background-color-main);
+    align-items: stretch;
+}
+
+.description {
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.32px;
+}
+
+.summary .number {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: calc(var(--default-padding) / 2);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #FFF;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 4px;
+    
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+
 }
